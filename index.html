@@ -128,7 +128,7 @@
 
 <body>
 	<div class="login">
-		<h2>枫忆落雪</h2>
+		<h2>登入</h2>
 		<form action="" onsubmit="login(event)">
 			<div class="inputBox">
 				<input type="text" required="" onfocus="showLabel(this)" onblur="hideLabel(this)">
@@ -196,6 +196,14 @@
 			else if (username === "谢衍玉" && password === "xieyanyu") {
 				localStorage.setItem('isLoggedIn', 'true');
 				window.location.replace("christmas/xyy.html");
+			}
+			else if (username === "纯" && password === "chun") {
+				localStorage.setItem('isLoggedIn', 'true');
+				window.location.replace("christmas/c.html");
+			}
+			else if (username === "子期" && password === "ziqi") {
+				localStorage.setItem('isLoggedIn', 'true');
+				window.location.replace("christmas/zq.html");
 			}
 			else {
 				alert("用户名或密码错误");
