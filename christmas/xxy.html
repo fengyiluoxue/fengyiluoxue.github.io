@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi">
+    <title>圣诞快乐！</title>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(#a2000a, #cf0000);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            background: url(tree.png);
+            z-index: 1;
+        }
+
+        .container .circle .greeting::after {
+            content: '熊轩宇，圣诞节快乐';
+            position: absolute;
+            inset: -100px -200px;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+        }
+
+        .container .circle {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            height: 350px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .container .circle::before {
+            content: '';
+            position: absolute;
+            inset: -200px -300px;
+            background: url(santa.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 600px;
+            animation: animate 5s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                transform: translateY(-25px);
+            }
+
+            50% {
+                transform: translateY(25px);
+            }
+        }
+
+        .container .circle::after {
+            content: 'Happy Christmas';
+            position: absolute;
+            inset: -185px -200px;
+            font-size: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+        }
+
+        .container .snow {
+            position: relative;
+            display: flex;
+        }
+
+        .container .snow span {
+            position: relative;
+            min-width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 1vw;
+            box-shadow: -100px 20px 5px #fff, 100px 20px 10px #fff;
+            animation: animateSnow 15s linear infinite;
+            animation-duration: calc(75s / var(--i));
+        }
+
+        .container .snow span:nth-child(even) {
+            min-width: 10px;
+            height: 10px;
+        }
+
+        @keyframes animateSnow {
+            0% {
+                transform: translateY(-10vh);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        @media (orientation: portrait) {
+            html {
+                transform: rotate(-90deg);
+                transform-origin: top left;
+                width: 100vh;
+                height: 100vh;
+                overflow-x: hidden;
+                position: fixed;
+                top: 100%;
+                left: 0;
+            }
+
+            body {
+                align-items: flex-start;
+            }
+
+            .container {
+                height: 60vh;
+            }
+
+            .container .circle {
+                top: 25px;
+                width: 175px;
+                height: 175px;
+            }
+
+            .container .circle::before {
+                background-size: 300px;
+            }
+
+            .container .circle::after {
+                inset: -75px -100px;
+                font-size: 2em;
+            }
+
+            .container .circle .greeting::after {
+                inset: -40px -100px;
+                font-size: 1em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="greeting"></div>
+        </div>
+        <div class="snow">
+            <!-- 添加雪花元素 --><span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:13"></span>
+            <span style="--i:15"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:13"></span>
+            <span style="--i:15"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+        </div>
+    </div>
+
+    <script>
+        // 检查登录状态
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        // 如果未登录，重定向回登录页面
+        if (!isLoggedIn) {
+            window.location.href = '../index.html';
+        }
+
+        // 在页面关闭或刷新时清除登录状态
+        window.addEventListener('beforeunload', function () {
+            localStorage.removeItem('isLoggedIn');
+        });
+    </script>
+</body>
+
+</html>
